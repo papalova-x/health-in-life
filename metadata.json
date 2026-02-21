@@ -1,0 +1,5 @@
+{
+  "name": "MindEase: Teman Kesehatan Holistik",
+  "description": "Aplikasi cerdas untuk cek kesehatan mental, psikologis, gigi, gaya hidup, nutrisi, aktivitas fisik, dan kesehatan digital.",
+  "requestFramePermissions": ["microphone", "camera"]
+}
