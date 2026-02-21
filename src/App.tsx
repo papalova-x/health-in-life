@@ -31,7 +31,7 @@ export default function App() {
           <div className="w-10 h-10 bg-sage-600 rounded-xl flex items-center justify-center text-white shadow-lg">
             <Leaf size={24} />
           </div>
-          <h1 className="font-serif text-2xl font-bold text-sage-800 tracking-tight">MindEase</h1>
+          <h1 className="font-serif text-2xl font-bold text-sage-800 tracking-tight">healthinaja</h1>
         </div>
         
         <nav className="flex flex-wrap justify-center bg-white/50 backdrop-blur-sm p-1.5 rounded-3xl border border-white/20 shadow-sm gap-1">

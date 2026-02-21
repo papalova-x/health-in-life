@@ -40,6 +40,23 @@ export const ChatBot: React.FC = () => {
     popSound.play();
 
     try {
+      // 1. Try Local Database API first
+      const localResponse = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMsg })
+      });
+      
+      const localData = await localResponse.json();
+      
+      if (localData.answer) {
+        setMessages(prev => [...prev, { role: 'model', text: localData.answer }]);
+        popSound.play();
+        setIsLoading(false);
+        return;
+      }
+
+      // 2. Fallback to Gemini if not found in local DB
       const history = messages.map(m => ({
         role: m.role,
         parts: [{ text: m.text }]
